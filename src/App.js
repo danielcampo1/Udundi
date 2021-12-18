@@ -2,12 +2,9 @@ import "./App.css";
 import React, { Component } from "react";
 import { Button } from "@react-md/button";
 import { TextIconSpacing, FontIcon } from "@react-md/icon";
-import {
-  ChatSVGIcon,
-  DeleteSVGIcon,
-  DoneSVGIcon,
-  SaveSVGIcon,
-} from "@react-md/material-icons";
+import { ChatSVGIcon } from "@react-md/material-icons";
+import Modal from "./components/modal";
+
 class App extends Component {
   render() {
     return (
@@ -26,6 +23,8 @@ class App extends Component {
               Read More
             </TextIconSpacing>
           </Button>
+          <br />
+          <Modal />
         </div>
       </div>
     );
