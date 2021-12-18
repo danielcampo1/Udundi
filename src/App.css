@@ -14,12 +14,15 @@ img {
 
 .text {
   position: absolute;
-  top: 520px;
-  left: 350px;
+  font-family: "Times New Roman", Times, serif;
+  top: 300px;
+  left: 120px;
+  font-size: 70px;
+  color: #f4f6f7;
 }
 
 .button {
   position: absolute;
-  top: 550px;
+  top: 600px;
   left: 375px;
 }
