@@ -1,6 +1,13 @@
 import "./App.css";
 import React, { Component } from "react";
-
+import { Button } from "@react-md/button";
+import { TextIconSpacing, FontIcon } from "@react-md/icon";
+import {
+  ChatSVGIcon,
+  DeleteSVGIcon,
+  DoneSVGIcon,
+  SaveSVGIcon,
+} from "@react-md/material-icons";
 class App extends Component {
   render() {
     return (
@@ -14,7 +21,11 @@ class App extends Component {
           <h1> Explore </h1>
         </div>
         <div className="button">
-          <button>+</button>
+          <Button id="combined-button-2" theme="clear" themeType="outline">
+            <TextIconSpacing icon={<ChatSVGIcon />} iconAfter>
+              Read More
+            </TextIconSpacing>
+          </Button>
         </div>
       </div>
     );
