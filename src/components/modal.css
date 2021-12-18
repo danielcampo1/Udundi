@@ -1,0 +1,32 @@
+.modal {
+  position: fixed;
+  top: 100px;
+  bottom: 50px;
+  left: 100px;
+  right: 600px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: groove;
+  opacity: 1;
+}
+
+.modal-content {
+  width: 500px;
+  background-color: white;
+}
+
+.model-header {
+  padding: 10px;
+}
+
+.modal-title {
+  margin: 0;
+}
+
+.modal-body {
+  padding: 10px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
