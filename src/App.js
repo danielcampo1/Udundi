@@ -1,10 +1,8 @@
 import "./App.css";
 import React, { Component } from "react";
 import { Button } from "@react-md/button";
-import { TextIconSpacing, FontIcon } from "@react-md/icon";
-import { ChatSVGIcon } from "@react-md/material-icons";
+import { FontIcon } from "@react-md/icon";
 import Modal from "./components/modal";
-import { Collapse } from "@react-md/transition";
 
 class App extends Component {
   constructor() {
@@ -33,7 +31,7 @@ class App extends Component {
                 themeType="contained"
                 onClick={this.handleClick}
               >
-                <FontIcon>close </FontIcon>
+                <FontIcon>close</FontIcon>
                 Read More
               </Button>
               <Modal onClose={this.onClose} show={this.state.show} />
