@@ -1,14 +1,19 @@
-import react from "react";
-import { Button } from "react-md";
+import React from "react";
+import { Button, FontIcon } from "react-md";
 
 const Modal = (props) => {
+  if (!props.show) {
+    return null;
+  }
   return (
-    <div className="modal">
-      <div className="model-content">
-        <div className="header">
-          <Button>here</Button>
+    <div className="modal" onClick={props.onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <div className="modal-header">
+          <Button onClick={props.onClose} theme="error" themeType="disabled">
+            <FontIcon>close</FontIcon>
+          </Button>
         </div>
-        <div className="model-title">
+        <div className="modal-title">
           <h2> Explore </h2>
         </div>
         <div className="modal-body">
