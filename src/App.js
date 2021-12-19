@@ -4,27 +4,41 @@ import { Button } from "@react-md/button";
 import { TextIconSpacing, FontIcon } from "@react-md/icon";
 import { ChatSVGIcon } from "@react-md/material-icons";
 import Modal from "./components/modal";
+import { Collapse } from "@react-md/transition";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = { show: false };
+  }
+
+  handleClick = () => {
+    this.setState({ show: true });
+  };
+
+  onClose = () => {
+    this.setState({ show: false });
+  };
+
   render() {
     return (
       <div className="app">
-        <img
-          src="https://images.unsplash.com/photo-1588993608283-7f0eda4438be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXVzdGlufGVufDB8fDB8fA%3D%3D&w=1000&q=80"
-          alt="pictures"
-        />
-
-        <div className="text">
-          <h1> Explore </h1>
-        </div>
-        <div className="button">
-          <Button id="combined-button-2" theme="clear" themeType="outline">
-            <TextIconSpacing icon={<ChatSVGIcon />} iconAfter>
-              Read More
-            </TextIconSpacing>
-          </Button>
-          <br />
-          <Modal />
+        <div className="wrapper">
+          <div className="txt">
+            <h1> Explore </h1>
+            <div className="btn">
+              <Button
+                id="combined-button-2"
+                theme="clear"
+                themeType="contained"
+                onClick={this.handleClick}
+              >
+                <FontIcon>close </FontIcon>
+                Read More
+              </Button>
+              <Modal onClose={this.onClose} show={this.state.show} />
+            </div>
+          </div>
         </div>
       </div>
     );
